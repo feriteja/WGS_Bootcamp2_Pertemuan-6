@@ -41,7 +41,8 @@ const writeContactFile = (contact) => {
 
   contacts.push(contact);
   fs.writeFileSync("data/Contact.json", JSON.stringify(contacts));
-  //   rl.close();
+
+  console.log("Thank you, Name already saved :)");
 };
 
 module.exports = { checkContactFile, writeContactFile };
