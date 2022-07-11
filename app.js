@@ -29,7 +29,6 @@ yargs.command({
     };
 
     writeContactFile(contact);
-    console.log("success");
   },
 });
 
