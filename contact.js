@@ -35,8 +35,9 @@ const writeContactFile = (contact) => {
   const contacts = JSON.parse(file);
 
   const isNameDuplicate = contacts.some((cons) => cons.name === contact.name);
-  if (isNameDuplicate)
+  if (isNameDuplicate) {
     return console.warn("Name is Duplicated, Please enter something else");
+  }
 
   contacts.push(contact);
   fs.writeFileSync("data/Contact.json", JSON.stringify(contacts));
